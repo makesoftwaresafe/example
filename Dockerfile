@@ -5,4 +5,4 @@ RUN gcc example.c -static -o /example
 
 FROM scratch
 COPY --from=builder /example /example
-CMD /example @@
+CMD ['/example', '@@']
