@@ -12,6 +12,10 @@ jobs:
   build:
     name: '${{ matrix.os }} shared=${{ matrix.shared }} ${{ matrix.build_type }}'
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+      packages: write
+      security-events: write
     strategy:
       matrix:
         os: [ubuntu-latest]
