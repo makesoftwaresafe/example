@@ -44,3 +44,14 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Run analysis
+        uses: ForAllSecure/mcode-action@v1
+        with:
+          args: --image ${{ steps.meta.outputs.tags }}
+          sarif-output: sarif
+
+      - name: Upload SARIF file(s)
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: sarif
