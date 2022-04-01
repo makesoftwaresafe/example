@@ -18,4 +18,4 @@ cmds:
   # (when "@@" is omitted Mayhem defaults to stdin inputs)
   - cmd: /example @@
 
-
+tests: []
