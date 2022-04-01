@@ -50,7 +50,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Run analysis
-        uses: ForAllSecure/mcode-action@9dc1a5429f9bf7ca9f45feef7c7118b4b44afb38
+        uses: ForAllSecure/mcode-action@v1
         with:
           args: --image ${{ steps.meta.outputs.tags }}
           sarif-output: sarif
