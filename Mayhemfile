@@ -1,0 +1,21 @@
+# Mayhem by https://forallsecure.com
+# Mayhemfile: configuration file for testing your target with Mayhem
+# Format: YAML 1.1
+
+# Project name that the target belongs to
+project: ethan42/example
+
+# Target name (should be unique within the project)
+target: example
+
+# Base image to run the binary in.
+image: ghcr.io/ethan42/example:main
+
+# List of commands used to test the target
+cmds:
+
+  # Command used to start the target, "@@" is the input file
+  # (when "@@" is omitted Mayhem defaults to stdin inputs)
+  - cmd: /example @@
+
+
